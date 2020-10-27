@@ -11,7 +11,7 @@ The tabs container
 	/*
 	Set the value to 3 to move the tabbar below the navbar
 	*/
-	-moz-box-ordinal-group: 1 !important;
+	-moz-box-ordinal-group: 3 !important;
 }
 
 #titlebar::after {
@@ -40,18 +40,18 @@ The tabs container
 }
 
 /* Hide solo tab */
-/*
 #tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:only-of-type {
   visibility: collapse;
 }
-*/
+
+/* Minimise tabbar size when only one tab open */
+#tabbrowser-tabs, #tabbrowser-tabs arrowscrollbox { min-height: 0 !important; }
 
 /* Hide New Tab Button immediately next to solo tab */
-/*
 #tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:only-of-type + toolbarbutton {
 	visibility: collapse;
 }
-*/
+
 
 	/* Stretch Tabs */
 .tabbrowser-tab[fadein]:not([pinned]) {
@@ -64,26 +64,26 @@ The tabs container
 
 .tab-background:-moz-lwtheme-darktext,
 .tab-background:-moz-lwtheme-brighttext {
-	background: transparent !important;
+	background: none !important;
 	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
 .tab-background[selected="true"] {
-	background: var(--bf-tab-selected-bg) !important;
+	background: none !important;
 }
 
 .tab-background:not[visuallyselected] {
 	background: var(--bf-tab-selected-bg) !important;
-	opacity: 0.5 !important;
+	opacity: 0 !important;
 }
 
 /* Remove the all the "lines" in tab sides */
-/* 
+
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
 	border-left: none !important;
 }
-*/
+
 
 /* Remove the lines on the side of the selected tab */
 .tabbrowser-tab[beforeselected-visible="true"]::after,
@@ -177,7 +177,7 @@ hbox.tab-content[pinned=true] .tab-text {
 .tabbrowser-tab {
 	border-radius: var(--bf-tab-border-radius) !important;
 	border-width: 0;
-	height: var(--bf-tab-height) !important;
+	height: 5px !important;
 	overflow: hidden;
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
@@ -188,7 +188,7 @@ hbox.tab-content[pinned=true] .tab-text {
 }
 
 .tabbrowser-tab:hover {
-	box-shadow: 0 1px 4px rgba(0,0,0,.05);
+	box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
 /* Set color scheme */
@@ -199,7 +199,7 @@ hbox.tab-content[pinned=true] .tab-text {
 
 /* 	Audio playing background */
 .tabbrowser-tab[soundplaying="true"] {
-	background-color: var(--bf-tab-soundplaying-bg) !important;
+	background-color: rgba(255,166,166,0.1) !important;
 }
 
 #tabbrowser-tabs {
@@ -207,6 +207,7 @@ hbox.tab-content[pinned=true] .tab-text {
 
 /* 	Audio Icon */
 .tab-icon-sound {
+    display: none !important;
 }
 
 /* Center pinned tab stack(Contains icon) if #tabbrowser-tabs[positionpinnedtabs=true] */
