@@ -12,7 +12,7 @@ download_bf() {
 
 	message "[>>] Downloading theme..."
 
-	curl -LJ0 https://github.com/manilarome/blurredfox/archive/master.tar.gz | tar -xz -C /tmp/
+	curl -LJ0 https://github.com/RedErick2903/blurredfox/archive/master.tar.gz | tar -xz -C /tmp/
 
 	# Download success!
 	if [[ $? -eq 0 ]];
@@ -59,6 +59,7 @@ download_bf() {
 	echo "┏━┛┃ ┃ ┛ "
 	echo "┛  ━━┛┛ ┛"
 	message "blurredfox successfully installed! Enjoy!"
+	echo "original by manilarome at https://github.com/manilarome/blurredfox"
 }
 
 function check_profile() {
