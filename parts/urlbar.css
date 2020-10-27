@@ -8,18 +8,18 @@ URL bar
 
 /* URL bar max-width and centered hack */
 #urlbar {
-	max-width: 70% !important;
-	margin: 0 15% !important;
+	max-width: 90% !important;
+	margin: 0 10% !important;
 
 	/* URL bar and toolbar height */
-	--urlbar-height: 36px !important;
-	--urlbar-toolbar-height: 40px !important;
+	--urlbar-height: 32px !important;
+	--urlbar-toolbar-height: 32px !important;
 }
 
 /* URL bar and toolbar height if compact mode */
 :root[uidensity="compact"] #urlbar {
-	--urlbar-height: 30px !important;
-	--urlbar-toolbar-height: 34px !important;
+	--urlbar-height: 36px !important;
+	--urlbar-toolbar-height: 40px !important;
 }
 
 #urlbar-input:focus {
@@ -39,7 +39,7 @@ URL bar
 /* Set color scheme */
 #urlbar-background:-moz-lwtheme-darktext,
 #urlbar-background:-moz-lwtheme-brighttext {
-	background: var(--bf-urlbar-bg) !important;
+	background: transparent !important;
 }
 
 .urlbar-icon:not([disabled]):hover,
