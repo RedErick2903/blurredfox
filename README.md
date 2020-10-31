@@ -1,3 +1,6 @@
+Fork with some changes that I believe make it more visually appealing.
+
+
 ## blurredfox
 
 ### A modern Firefox CSS Theme
