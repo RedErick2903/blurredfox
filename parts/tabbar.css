@@ -6,6 +6,11 @@
 The tabs container
 */
 
+/* Make tab bar background colour/opacity same as the url bar*/
+#TabsToolbar {
+    opacity: .6 !important;
+}
+
 /* Move tab bar beneath the url bar */
 #titlebar {
 	/*
